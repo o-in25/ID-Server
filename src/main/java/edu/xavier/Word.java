@@ -6,17 +6,8 @@ import java.io.IOException;
 
 public class Word {
 
-    public WordReader wordReader;
     public String threeLetterWord;
     public String fourLetterWord;
-
-    public WordReader getWordReader() {
-        return wordReader;
-    }
-
-    public void setWordReader(WordReader wordReader) {
-        this.wordReader = wordReader;
-    }
 
     public String getThreeLetterWord() {
         return threeLetterWord;

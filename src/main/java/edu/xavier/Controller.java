@@ -11,7 +11,23 @@ public class Controller {
 
 
     @RequestMapping("/id")
-    public Word greeting(@RequestParam(value="id", defaultValue="word") String word) {
+    public Word id(@RequestParam(value="id", defaultValue="word") String word) {
         return new Word();
+    }
+
+
+    @RequestMapping("/four")
+    public String fourWord(@RequestParam(value="id", defaultValue="word") String word) {
+        return new Word().getFourLetterWord();
+    }
+
+    @RequestMapping("/three")
+    public String threeWord(@RequestParam(value="id", defaultValue="word") String word) {
+        return new Word().getThreeLetterWord();
+    }
+
+    @RequestMapping("/password")
+    public PasswordGen password(@RequestParam(value="id", defaultValue="word") String word) {
+        return new PasswordGen();
     }
 }

@@ -72,17 +72,19 @@ public class WordReader {
         while(!found) {
             if(start == stop) {
                 // time to stop
-                word = "No word of length " + length + " found";
+                word = validWords.get(getRandomWordBetween(0, validWords.size()));
                 found = true;
             } else {
                 int random = getRandomWordBetween(0, validWords.size());
                 String next = validWords.get(random);
-                if(next.length() == length && !restrictedWords.contains(next)) {
-                    // found
-                    word = next;
-                    found = true;
-                } else {
-                    start++;
+                if(next != null) {
+                    if(next.length() == length && !restrictedWords.contains(next)) {
+                        // found
+                        word = next;
+                        found = true;
+                    } else {
+                        start++;
+                    }
                 }
             }
         }
