@@ -1,1 +1,2 @@
 # ID-Server
+Researchers who want to study before and after effects in a confidential way need to have a good way to provide random ids to their subjects. The subjects know the random id, but the researcher can’t. One way to do that is write a server that provides such an id. To satisfy confidentiality requirements, this server must never store data about who connects to receive the service. At the same time, we need to be pretty sure the ids generated are random, unique, and somewhat easy to remember.
